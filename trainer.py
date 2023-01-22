@@ -44,12 +44,12 @@ if __name__ == "__main__":
     except:
         pass
     i = 1
-    #dataarray = []
+    dataarray = []
     for j in range(5):
         print(j + 1)
         time.sleep(1)
     while True:
-        image1 = screenGrabber.grab_screen()
+        image1 = screenGrabber.grab_screen([0, 350, 800, 650])
         #image1 = grabscreen.grab_screen()
         image1 = imageprocessing(image1)
         image1 = cv2.resize(image1, (400, 150))
@@ -59,3 +59,5 @@ if __name__ == "__main__":
         writecsv([full_name_image,keypressed])
         cv2.imwrite(full_name_image,image1)
         print(i)
+        i+=1
+        time.sleep(1)

@@ -1,9 +1,9 @@
-import grabscreen
+import screenGrabber
 import csv
 import os
 import time
 import cv2
-from getkeys import key_check
+from keyGetter import key_check
 import numpy as np
 from PIL import Image
 

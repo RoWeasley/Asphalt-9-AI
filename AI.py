@@ -1,10 +1,10 @@
 from keras.models import load_model
-import grabscreen
-from gettrainingdata import imageprocessing
+import screenGrabber
+from trainer import imageprocessing
 import numpy as np
-from sendkey import PressKey
-from sendkey import ReleaseKey
-from sendkey import PressAndReleaseKey
+from keySender import PressKey
+from keySender import ReleaseKey
+from keySender import PressAndReleaseKey
 import time
 import cv2
 IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 150, 400, 1
@@ -24,7 +24,7 @@ for j in range(5):
     time.sleep(1)
 k = np.array([[0,0,0]])
 while True:
-    image1 = grabscreen.grab_screen([0, 350, 800, 650])
+    image1 = screenGrabber.grab_screen([0, 350, 800, 650])
     image1 = imageprocessing(image1)
     image1 = cv2.resize(image1, (400, 150))
     #new_img = imageprocessing(new_img)

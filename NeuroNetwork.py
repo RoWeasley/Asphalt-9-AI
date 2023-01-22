@@ -83,7 +83,7 @@ def build_model(args):
 
     #Model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape=INPUT_SHAPE))
 
-    '''if Model is not None:
+    if Model is not None:
         Model.add(Convolution2D(24, (5, 5), padding='same', strides=(2, 2),input_shape=INPUT_SHAPE))
         Model.add(Activation(activation_relu))
         Model.add(MaxPooling2D(pool_size=(2, 2), strides=(1, 1)))
@@ -123,9 +123,9 @@ def build_model(args):
 
         Model.summary()
     
-        return Model'''
+        return Model
     
-    Model.add(Convolution2D(24, (5, 5), padding='same', strides=(2, 2),input_shape=INPUT_SHAPE))
+    '''Model.add(Convolution2D(24, (5, 5), padding='same', strides=(2, 2),input_shape=INPUT_SHAPE))
     Model.add(Activation(activation_relu))
     Model.add(MaxPooling2D(pool_size=(2, 2), strides=(1, 1)))
 
@@ -164,7 +164,7 @@ def build_model(args):
 
     Model.summary()
 
-    return Model
+    return Model'''
 
 
 def train_model(model, args, X_train, X_valid, y_train, y_valid):

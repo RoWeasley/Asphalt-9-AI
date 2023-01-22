@@ -49,7 +49,7 @@ if __name__ == "__main__":
         print(j + 1)
         time.sleep(1)
     while True:
-        image1 = grabscreen.grab_screen()
+        image1 = screenGrabber.grab_screen()
         #image1 = grabscreen.grab_screen()
         image1 = imageprocessing(image1)
         image1 = cv2.resize(image1, (400, 150))
